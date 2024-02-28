@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+  .slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .slide {
+    min-width: 100%;
+    flex: 0 0 auto;
+  }
+</style>
+</head>
+<body>
+<div class="slider">
+  <div class="slider-container">
+    <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+    <!-- Add more images here -->
+  </div>
+</div>
+
+<script>
+  const sliderContainer = document.querySelector('.slider-container');
+  let slideIndex = 0;
+
+  function nextSlide() {
+    slideIndex++;
+    if (slideIndex === sliderContainer.children.length) {
+      slideIndex = 0;
+    }
+    updateSlider();
+  }
+
+  function updateSlider() {
+    sliderContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  setInterval(nextSlide, 2000); // Change image every 2 seconds
+</script>
+</body>
+</html>

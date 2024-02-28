@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        h2{
+                text-align: center;
+            }
+        input[type=text], input[type=email], input[type=mobno], input[type=UID],input[type=file] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+        textarea {
+            width: 100%;
+            /* padding: 10px; */
+            margin: 5px 0;
+            box-sizing: border-box;
+
+
+        }
+        .textarea {
+            height: 50px;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="/submit_registration" method="post" enctype="multipart/form-data">
+    <label for="firstname">First Name</label>
+    <input type="text" id="firstname" name="firstname" required>
+
+    <label for="lastname">Last Name</label>
+    <input type="text" id="lastname" name="lastname" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mobno">mob.no</label>
+    <input type="mobno" id="mobno" name="mobno" required>
+    
+    <label for="UID">description</label>
+    <input class="textarea" type="text" id="UID" name="UID" required>
+    
+    <label for="image">Upload Image</label>
+    <input type="file" id="image" name="image">
+
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>
