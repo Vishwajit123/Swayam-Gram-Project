@@ -1070,6 +1070,19 @@ body{
 /*===============================
 	Start Call to action CSS
 =================================*/
+.action .quote {
+    height: 350px; 
+    width: 100%; 
+    object-fit: cover; 
+    padding: 5px;
+    background-image: url("img/panchayat.png");
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .call-action{
 	background-image:url('img/farm2.jpeg');
 	background-size:cover;
